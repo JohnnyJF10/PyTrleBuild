@@ -32,3 +32,6 @@ packages = ["pyprj2tom", "pytom2pc", "trle_common"]
 
 [tool.setuptools.package-data]
 pyprj2tom = ["data/objects.json"]
+
+[project.urls]
+Repository = "https://github.com/JohnnyJF10/PyTrleBuild.git"

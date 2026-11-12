@@ -18,28 +18,6 @@ Both produce the same bytes as the original tools on the test levels (see
 > building real levels; for that, use a maintained editor such as
 > [Tomb Editor](https://github.com/MontyTRC89/Tomb-Editor).
 
-## Quick start
-
-Python 3.10 or later; the only dependency is `numpy`. Runs on Windows, Linux and macOS.
-
-```sh
-pip install .                                   # installs the commands pyprj2tom and pytom2pc
-
-pyprj2tom level.prj --texture level.tga --wad level.wad --out build
-pytom2pc  build/level.TOM --wad level.wad --swd level.swd --sfx level.sfx --sam level.sam \
-          --samples sound/samples -o build/level.tr4
-```
-
-Inside a TRLE installation the classic folder layout is enough (`pyprj2tom trle/maps/karnak/karnak.prj`,
-`pytom2pc trle/graphics/wads/karnak.tom`). Without installing: `pip install -r requirements.txt`, then
-`python src/run_pyprj2tom.py ...` and `python src/run_pytom2pc.py ...`.
-
-All options, how the input files are found, and troubleshooting: **[docs/USAGE.md](docs/USAGE.md)**.
-
-**No game data is included.** You need your own TRLE installation or other level files. The only
-editor data in the repository is the list of object slot names (from the editor's `objects.h`), as
-[`src/pyprj2tom/data/objects.json`](src/pyprj2tom/data/objects.json).
-
 ## Documentation
 
 Start with [docs/README.md](docs/README.md). In short:
