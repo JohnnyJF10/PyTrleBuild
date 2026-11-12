@@ -1,0 +1,3 @@
+# Runtime dependency of pyprj2tom and pytom2pc (Python 3.10 or later).
+# Install with:  pip install -r requirements.txt   (or: pip install .  for the pyprj2tom/pytom2pc commands)
+numpy>=1.22

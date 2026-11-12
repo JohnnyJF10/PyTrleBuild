@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytrlebuild"
+version = "0.1.0"
+description = "Readable Python study implementation of the Tomb Raider Level Editor's level build: PRJ -> TOM (pyprj2tom) and TOM -> TR4 (pytom2pc)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["numpy>=1.22"]
+keywords = ["tomb raider", "trle", "level editor", "file formats", "reverse engineering", "tr4"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment",
+    "Topic :: Education",
+]
+
+[project.scripts]
+pyprj2tom = "pyprj2tom.cli:main"
+pytom2pc = "pytom2pc.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["pyprj2tom", "pytom2pc", "trle_common"]
+
+[tool.setuptools.package-data]
+pyprj2tom = ["data/objects.json"]
